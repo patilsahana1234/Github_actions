@@ -4,8 +4,13 @@ jobs:
  first-job: 
   runs-on: ubuntu-latest
   steps:
-   - name: printing first statement 
-     run: echo "Hello all"
-   - name: printing second statement
-     run: echo "good morning"
+   - name: verify installed java 
+     run: java --version
+   - name: installing java
+     uses: actions/setup-java@v5.1.0
+     with:
+       java-version: "17"
+       distribution: 'tumerin'
+       
+      
      
